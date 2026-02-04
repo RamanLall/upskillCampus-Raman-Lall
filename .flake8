@@ -1,0 +1,29 @@
+[flake8]
+# Exclude third-party dependencies and other non-project directories
+exclude =
+    .git,
+    __pycache__,
+    .ipynb_checkpoints,
+    .virtual_documents,
+    WebApp/WebApp/Lib,
+    WebApp/WebApp/lib,
+    */site-packages/*,
+    venv,
+    env,
+    .venv
+
+# Select the error codes that should cause the build to fail
+# E9: Runtime errors
+# F63: Invalid syntax
+# F7: Statement errors
+# F82: Undefined names
+select = E9,F63,F7,F82
+
+# Show source code for each error
+show-source = True
+
+# Print total count of errors
+count = True
+
+# Show statistics
+statistics = True
